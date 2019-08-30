@@ -1,0 +1,4 @@
+Watching for file changes with StatReloader
+[30/Aug/2019 08:42:55] "GET /rango/ HTTP/1.1" 200 29
+[30/Aug/2019 08:42:56] "GET /rango/ HTTP/1.1" 200 29
+[30/Aug/2019 08:42:57] "GET /rango/ HTTP/1.1" 200 29
