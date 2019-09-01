@@ -77,3 +77,27 @@ Not Found: /http:/www.baidu.com/cache/global/img/gs.gif
 [30/Aug/2019 10:28:18] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1738
 =======
 >>>>>>> e95ae40b179d3eb696bea3fa8b71b07c9d31d42b
+Watching for file changes with StatReloader
+[01/Sep/2019 16:42:20] "GET /rango/about/ HTTP/1.1" 200 394
+[01/Sep/2019 16:42:20] "GET /static/css/about.css HTTP/1.1" 200 102
+[01/Sep/2019 16:42:21] "GET /rango/about/ HTTP/1.1" 200 394
+[01/Sep/2019 16:42:21] "GET /static/css/about.css HTTP/1.1" 304 0
+[01/Sep/2019 16:42:25] "GET /static/css/about.css HTTP/1.1" 304 0
+[01/Sep/2019 16:43:10] "GET /rango/about/ HTTP/1.1" 200 394
+[01/Sep/2019 16:43:10] "GET /static/css/about.css HTTP/1.1" 200 96
+[01/Sep/2019 16:43:11] "GET /rango/about/ HTTP/1.1" 200 394
+[01/Sep/2019 16:43:11] "GET /static/css/about.css HTTP/1.1" 304 0
+[01/Sep/2019 16:43:12] "GET /rango/about/ HTTP/1.1" 200 394
+[01/Sep/2019 16:43:12] "GET /static/css/about.css HTTP/1.1" 304 0
+[01/Sep/2019 16:43:14] "GET /rango/about/ HTTP/1.1" 200 394
+[01/Sep/2019 16:43:15] "GET /static/css/about.css HTTP/1.1" 304 0
+[01/Sep/2019 16:43:16] "GET /static/css/about.css HTTP/1.1" 304 0
+[01/Sep/2019 16:43:33] code 400, message Bad request version ('HTTP')
+[01/Sep/2019 16:43:33] "GET ../../mnt/custom/ProductDefinition HTTP" 400 -
+[01/Sep/2019 16:44:12] "GET /rango/about/ HTTP/1.1" 200 394
+[01/Sep/2019 16:44:12] "GET /static/css/about.css HTTP/1.1" 200 81
+[01/Sep/2019 16:44:15] "GET /rango/ HTTP/1.1" 200 594
+[01/Sep/2019 16:44:15] "GET /static/css/base.css HTTP/1.1" 200 84
+[01/Sep/2019 16:44:15] "GET /static/js/jquery.js HTTP/1.1" 404 1660
+[01/Sep/2019 16:44:19] "GET /rango/about/ HTTP/1.1" 200 394
+[01/Sep/2019 16:44:19] "GET /static/css/about.css HTTP/1.1" 304 0
