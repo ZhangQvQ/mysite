@@ -101,3 +101,13 @@ Watching for file changes with StatReloader
 [01/Sep/2019 16:44:15] "GET /static/js/jquery.js HTTP/1.1" 404 1660
 [01/Sep/2019 16:44:19] "GET /rango/about/ HTTP/1.1" 200 394
 [01/Sep/2019 16:44:19] "GET /static/css/about.css HTTP/1.1" 304 0
+/root/git-tutorial/mysite/tango_with_django_project/tango_with_django_project/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 01, 2019 - 16:40:12
+Django version 2.2.3, using settings 'tango_with_django_project.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
