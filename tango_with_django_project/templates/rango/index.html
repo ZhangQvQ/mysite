@@ -10,14 +10,22 @@
 	</head>
 	<body style="background-image: url({% static "images/game_pic/baolei.jpg" %});">
 		<h1>Rango says...</h1>
+		<div>hey there partner!</div>
 		<div>
-			hey there partner!<br />
-			<strong>{{ boldmessage }}</strong><br />
+			{% if categories %}
+			<ul>
+				{% for category in categories %}
+					<li>{{ category }}</li>
+				{% endfor %}
+			</ul>
+			{% else %}
+				<strong>There are no categories present.</strong>
+			{% endif %}
 		</div>
 		<div>
-			<a href='/rango/about'>About</a>
-		</div>
+			<a href='/rango/about'>About</a><br />
 		<img class="Below" src="{% static "images/game_pic/Below.jpg" %}" alt="Below.jpg">
+		</div>
 	</body>
 </html>
 

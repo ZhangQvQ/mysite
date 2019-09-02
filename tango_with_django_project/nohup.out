@@ -111,3 +111,744 @@ Starting development server at http://0:80/
 Quit the server with CONTROL-C.
 Watching for file changes with StatReloader
 Watching for file changes with StatReloader
+[01/Sep/2019 16:53:30] "GET /rango/about/ HTTP/1.1" 200 394
+[01/Sep/2019 16:53:30] "GET /static/css/about.css HTTP/1.1" 304 0
+[01/Sep/2019 16:53:32] "GET /rango/about/ HTTP/1.1" 200 394
+[01/Sep/2019 17:15:51] code 400, message Bad request version ('HTTP')
+[01/Sep/2019 17:15:51] "GET ../../mnt/custom/ProductDefinition HTTP" 400 -
+Not Found: /
+[01/Sep/2019 17:17:41] "GET / HTTP/1.1" 404 2173
+Not Found: /
+[01/Sep/2019 17:58:14] "GET / HTTP/1.1" 404 2173
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[01/Sep/2019 17:58:14] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('101.132.111.175', 49345)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+Not Found: /
+[01/Sep/2019 17:58:15] "GET / HTTP/1.1" 404 2173
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[01/Sep/2019 17:58:15] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('101.132.111.175', 49348)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[01/Sep/2019 18:05:09] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[01/Sep/2019 18:05:09] "  /*à     Cookie: mstshash=Administr" 400 -
+Not Found: /favicon.ico
+[01/Sep/2019 18:12:43] "GET /favicon.ico HTTP/1.1" 404 2224
+Not Found: /favicon.ico
+[01/Sep/2019 18:12:43] "GET /favicon.ico HTTP/1.1" 404 2224
+Not Found: /
+[01/Sep/2019 18:36:12] "GET / HTTP/1.1" 404 2173
+Not Found: /
+[01/Sep/2019 18:54:32] "GET / HTTP/1.1" 404 2173
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[01/Sep/2019 18:54:32] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('62.210.83.78', 36000)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+Not Found: /
+[01/Sep/2019 19:08:17] "GET / HTTP/1.1" 404 2173
+Not Found: /
+[01/Sep/2019 19:29:03] "GET / HTTP/1.1" 404 2176
+Not Found: /http:/www.baidu.com/cache/global/img/gs.gif
+[01/Sep/2019 20:30:49] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1738
+----------------------------------------
+Exception happened during processing of request from ('80.82.70.187', 58985)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+Not Found: /
+[01/Sep/2019 20:57:27] "GET / HTTP/1.1" 404 2173
+[01/Sep/2019 21:05:14] code 400, message Bad request version ('HTTP')
+[01/Sep/2019 21:05:14] "GET ../../mnt/custom/ProductDefinition HTTP" 400 -
+Not Found: /
+[01/Sep/2019 21:05:56] "GET / HTTP/1.1" 404 2176
+Not Found: /
+[01/Sep/2019 21:51:51] "GET / HTTP/1.1" 404 2176
+Not Found: /favicon.ico
+[01/Sep/2019 21:53:56] "GET /favicon.ico HTTP/1.1" 404 2224
+Not Found: /favicon.ico
+[01/Sep/2019 21:53:56] "GET /favicon.ico HTTP/1.1" 404 2224
+Not Found: /
+[01/Sep/2019 22:09:04] "GET / HTTP/1.1" 404 2176
+Not Found: /
+[01/Sep/2019 22:22:48] "GET / HTTP/1.1" 404 2176
+Not Found: /
+[01/Sep/2019 22:53:20] "GET / HTTP/1.1" 404 2173
+----------------------------------------
+Exception happened during processing of request from ('27.24.190.202', 49235)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[01/Sep/2019 23:55:49] "GET /rango/ HTTP/1.1" 200 594
+Not Found: /
+[01/Sep/2019 23:58:21] "GET / HTTP/1.1" 404 2173
+Not Found: /
+[02/Sep/2019 00:16:08] "GET / HTTP/1.1" 404 2176
+[02/Sep/2019 01:09:55] code 400, message Bad request version ('HTTP')
+[02/Sep/2019 01:09:55] "GET ../../mnt/custom/ProductDefinition HTTP" 400 -
+Not Found: /
+[02/Sep/2019 01:46:40] "GET / HTTP/1.1" 404 2173
+Not Found: /
+[02/Sep/2019 02:13:27] "GET / HTTP/1.1" 404 2173
+Not Found: /
+[02/Sep/2019 02:38:50] "GET / HTTP/1.1" 404 2173
+----------------------------------------
+Exception happened during processing of request from ('94.74.176.21', 58347)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+Not Found: /
+[02/Sep/2019 02:41:20] "GET / HTTP/1.1" 404 2176
+Not Found: /
+[02/Sep/2019 02:47:35] "GET / HTTP/1.1" 404 2173
+Not Found: /setup.cgi
+[02/Sep/2019 02:49:20] "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=busybox&curpath=/&currentsetting.htm=1 HTTP/1.1" 404 2320
+----------------------------------------
+Exception happened during processing of request from ('172.218.157.37', 33234)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+Not Found: /setup.cgi
+[02/Sep/2019 02:54:34] "GET /setup.cgi?next_file=netgear.cfg&todo=syscmd&cmd=busybox&curpath=/&currentsetting.htm=1 HTTP/1.1" 404 2320
+----------------------------------------
+Exception happened during processing of request from ('81.161.213.252', 46987)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+Not Found: /
+[02/Sep/2019 03:08:12] "GET / HTTP/1.1" 404 2176
+[02/Sep/2019 04:55:20] code 400, message Bad request version ('HTTP')
+[02/Sep/2019 04:55:20] "GET ../../mnt/custom/ProductDefinition HTTP" 400 -
+Not Found: /
+[02/Sep/2019 04:59:17] "GET / HTTP/1.1" 404 2176
+Not Found: /
+[02/Sep/2019 05:09:25] "GET / HTTP/1.1" 404 2173
+Not Found: /
+[02/Sep/2019 05:19:32] "OPTIONS / HTTP/1.1" 404 2177
+Not Found: /
+[02/Sep/2019 05:56:58] "GET / HTTP/1.1" 404 2173
+Not Found: /
+[02/Sep/2019 06:01:39] "GET / HTTP/1.1" 404 2176
+Not Found: /http:/www.baidu.com/cache/global/img/gs.gif
+[02/Sep/2019 06:30:38] "GET http://www.baidu.com/cache/global/img/gs.gif HTTP/1.1" 404 1738
+----------------------------------------
+Exception happened during processing of request from ('80.82.70.187', 56088)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+Not Found: /
+[02/Sep/2019 06:38:13] "GET / HTTP/1.1" 404 2173
+Not Found: /
+[02/Sep/2019 07:09:53] "GET / HTTP/1.1" 404 2173
+[02/Sep/2019 07:19:16] "GET /static/images/game_pic/baolei.jpg HTTP/1.1" 200 1126925
+[02/Sep/2019 08:45:24] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[02/Sep/2019 08:45:24] "  /*à     Cookie: mstshash=Administr" 400 -
+[02/Sep/2019 08:46:20] code 400, message Bad request version ('HTTP')
+[02/Sep/2019 08:46:20] "GET ../../mnt/custom/ProductDefinition HTTP" 400 -
+Not Found: /
+[02/Sep/2019 09:30:09] "GET / HTTP/1.1" 404 2173
+Not Found: /
+[02/Sep/2019 09:31:51] "GET / HTTP/1.1" 404 2173
+Not Found: /
+[02/Sep/2019 09:50:22] "GET / HTTP/1.1" 404 2173
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[02/Sep/2019 09:50:22] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('54.202.94.161', 37812)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/usr/local/lib/python3.6/dist-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+Not Found: /
+[02/Sep/2019 10:03:49] "GET / HTTP/1.1" 404 2173
+Not Found: /
+[02/Sep/2019 10:29:28] "GET / HTTP/1.0" 404 2182
+Not Found: /zh-CN/SystemSetting/AuthMenuList
+[02/Sep/2019 11:34:08] "GET /zh-CN/SystemSetting/AuthMenuList HTTP/1.1" 404 2287
+Not Found: /
+[02/Sep/2019 11:38:29] "GET / HTTP/1.1" 404 2173
+/root/git-tutorial/mysite/tango_with_django_project/rango/models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 01, 2019 - 16:51:58
+Django version 2.2.3, using settings 'tango_with_django_project.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/management/commands/runserver.py", line 109, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/autoreload.py", line 77, in raise_last_exception
+    raise _exception[1]
+  File "/usr/local/lib/python3.6/dist-packages/django/core/management/__init__.py", line 337, in execute
+    autoreload.check_errors(django.setup)()
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/dist-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/usr/local/lib/python3.6/dist-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/root/git-tutorial/mysite/tango_with_django_project/rango/models.py", line 4, in <module>
+    class Category(models.Model):
+  File "/root/git-tutorial/mysite/tango_with_django_project/rango/models.py", line 5, in Category
+    name = models.CharField(max_length=128, unique=Ture)
+NameError: name 'Ture' is not defined
+
+/root/git-tutorial/mysite/tango_with_django_project/rango/models.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/management/commands/runserver.py", line 109, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/autoreload.py", line 77, in raise_last_exception
+    raise _exception[1]
+  File "/usr/local/lib/python3.6/dist-packages/django/core/management/__init__.py", line 337, in execute
+    autoreload.check_errors(django.setup)()
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/dist-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/usr/local/lib/python3.6/dist-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/root/git-tutorial/mysite/tango_with_django_project/rango/models.py", line 10, in <module>
+    class Page(models.Model):
+  File "/root/git-tutorial/mysite/tango_with_django_project/rango/models.py", line 11, in Page
+    category = models.Foreignkey(Category)
+AttributeError: module 'django.db.models' has no attribute 'Foreignkey'
+
+/root/git-tutorial/mysite/tango_with_django_project/rango/models.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/management/commands/runserver.py", line 109, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/autoreload.py", line 77, in raise_last_exception
+    raise _exception[1]
+  File "/usr/local/lib/python3.6/dist-packages/django/core/management/__init__.py", line 337, in execute
+    autoreload.check_errors(django.setup)()
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/dist-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/usr/local/lib/python3.6/dist-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/root/git-tutorial/mysite/tango_with_django_project/rango/models.py", line 10, in <module>
+    class Page(models.Model):
+  File "/root/git-tutorial/mysite/tango_with_django_project/rango/models.py", line 11, in Page
+    category = models.ForeignKey(Category)
+TypeError: __init__() missing 1 required positional argument: 'on_delete'
+
+/root/git-tutorial/mysite/tango_with_django_project/rango/models.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/management/commands/runserver.py", line 109, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/autoreload.py", line 77, in raise_last_exception
+    raise _exception[1]
+  File "/usr/local/lib/python3.6/dist-packages/django/core/management/__init__.py", line 337, in execute
+    autoreload.check_errors(django.setup)()
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/dist-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/usr/local/lib/python3.6/dist-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/root/git-tutorial/mysite/tango_with_django_project/rango/models.py", line 10, in <module>
+    class Page(models.Model):
+  File "/root/git-tutorial/mysite/tango_with_django_project/rango/models.py", line 11, in Page
+    category = models.ForeignKey(Category)
+TypeError: __init__() missing 1 required positional argument: 'on_delete'
+
+/root/git-tutorial/mysite/tango_with_django_project/rango/models.py changed, reloading.
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/management/commands/runserver.py", line 109, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/autoreload.py", line 77, in raise_last_exception
+    raise _exception[1]
+  File "/usr/local/lib/python3.6/dist-packages/django/core/management/__init__.py", line 337, in execute
+    autoreload.check_errors(django.setup)()
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/autoreload.py", line 54, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib/python3.6/dist-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/usr/local/lib/python3.6/dist-packages/django/apps/config.py", line 211, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/root/git-tutorial/mysite/tango_with_django_project/rango/models.py", line 10, in <module>
+    class Page(models.Model):
+  File "/root/git-tutorial/mysite/tango_with_django_project/rango/models.py", line 12, in Page
+    title = models.CharField(max_lenght=128)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/fields/__init__.py", line 1037, in __init__
+    super().__init__(*args, **kwargs)
+TypeError: __init__() got an unexpected keyword argument 'max_lenght'
+
+/root/git-tutorial/mysite/tango_with_django_project/tango_with_django_project/settings.py changed, reloading.
+Watching for file changes with StatReloader
+[02/Sep/2019 13:01:22] "GET /rango/ HTTP/1.1" 200 594
+[02/Sep/2019 13:01:22] "GET /static/js/jquery.js HTTP/1.1" 404 1660
+[02/Sep/2019 13:01:22] "GET /static/css/base.css HTTP/1.1" 304 0
+Not Found: /favicon.ico
+[02/Sep/2019 13:01:23] "GET /favicon.ico HTTP/1.1" 404 2224
+[02/Sep/2019 13:01:29] "GET /admin HTTP/1.1" 301 0
+[02/Sep/2019 13:01:29] "GET /admin/ HTTP/1.1" 302 0
+[02/Sep/2019 13:01:29] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1821
+[02/Sep/2019 13:01:29] "GET /static/admin/css/login.css HTTP/1.1" 200 1233
+[02/Sep/2019 13:01:29] "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+[02/Sep/2019 13:01:29] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17944
+[02/Sep/2019 13:01:29] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[02/Sep/2019 13:01:29] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[02/Sep/2019 13:01:29] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[02/Sep/2019 13:01:31] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[02/Sep/2019 13:01:31] "GET /admin/ HTTP/1.1" 200 3001
+[02/Sep/2019 13:01:31] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[02/Sep/2019 13:01:31] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[02/Sep/2019 13:01:31] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[02/Sep/2019 13:01:31] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+/root/git-tutorial/mysite/tango_with_django_project/rango/admin.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 02, 2019 - 12:53:14
+Django version 2.2.3, using settings 'tango_with_django_project.settings'
+Starting development server at http://0:80/
+Quit the server with CONTROL-C.
+Watching for file changes with StatReloader
