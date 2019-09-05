@@ -1,16 +1,12 @@
-<!DOCTYPE html>
+{% extends 'rango/base.html' %}
 {% load staticfiles %}
 
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>About</title>
-		<link rel="stylesheet" href="{% static "css/about.css"%}">
-	</head>
-	<body style="background-image: url({% static "images/game_pic/RiME_4K.jpg" %});">
-		<h1 >This tutorial has been put together by<br/><strong>{{yourName}}</strong></h1>
-		<a href="/rango">Index</a><br>
-		<img class="cat" src="{{ MEDIA_URL }}cat.jpg"/>
-	</body>
-</html>
+{% block title_block %}
+	About
+{% endblock %}
+
+{% block body_block %}
+	<h1 >This tutorial has been put together by<br/><strong>{{yourName}}</strong></h1><br />
+	<img class="cat" src="{{ MEDIA_URL }}cat.jpg"/>
+{% endblock %}
 
