@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from datetime import datetime, timedelta
 from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -6,17 +7,62 @@ from django.http import HttpResponse, HttpResponseRedirect
 from rango.models import Category, Page
 from rango.forms import CategoryForm, PageForm, UserForm, UserProfileForm
 
+
 def index(request):
     category_list = Category.objects.order_by('-likes')[:5]
     page_list = Page.objects.order_by('-views')[:5]
     context_dict = {'categories': category_list, 'pages': page_list}
     
-    return render(request, 'rango/index.html', context= context_dict)
+    
+    visitor_cookie_handler(request)
+    check_client_side_cookie(request)
+    context_dict['visits'] = request.session['visits']
+
+    response = render(request, 'rango/index.html', context= context_dict)
+    return response
+
+def check_client_side_cookie(request):
+    visits = request.COOKIES.get('visits', False)
+    last_visit = request.COOKIES.get('last_visit', False)
+    session_id = request.COOKIES.get('sessionid', False)
+
+    print('Client\'s ')
+    print('visits: ', visits) 
+    print('last_visit: ', last_visit) 
+    print('session_id: ', session_id)
+    
+    if session_id:
+        visits = request.session['visits']
+        last_visit = request.session['last_visit']
+        print("Server\'s ")
+        print('visits: ', visits)
+        print('last_visit: ', last_visit)
+
+
+def get_server_side_cookie(request, cookie, default_val=None):
+    val = request.session.get(cookie)
+    if not val:
+        val = default_val
+    return val
+
+def visitor_cookie_handler(request):
+    visits = int(request.session.get('visits', '1'))
+
+    last_visit_cookie = request.session.get('last_visit', str(datetime.now()))
+    last_visit_time = datetime.strptime(last_visit_cookie[:-7],
+            '%Y-%m-%d %H:%M:%S')
+    if (datetime.now() - last_visit_time).seconds > 30:
+        visits = visits + 1
+        request.session['last_visit'] = str(datetime.now())
+    else:
+        request.session['last_visit'] = last_visit_cookie
+
+    request.session['visits'] = visits
 
 def about(request):
-    print(request.method)
-    print(request.user)
-    context_dict = {'yourName': "ZhangQi"}
+    visitor_cookie_handler(request)
+    visits = request.session['visits']
+    context_dict = {'yourName': "ZhangQi", 'visits': visits}
     return render(request, 'rango/about.html', context = context_dict)
 
 def show_category(request, category_name_slug):

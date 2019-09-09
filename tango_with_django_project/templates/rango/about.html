@@ -6,7 +6,8 @@
 {% endblock %}
 
 {% block body_block %}
-	<h1 >This tutorial has been put together by<br/><strong>{{yourName}}</strong></h1><br />
+	<h1 >This tutorial has been put together by<br/><strong>{{ yourName }}</strong></h1><br />
+	<div><p>visits: <strong>{{ visits }}</strong></p></div>
 	<img class="cat" src="{{ MEDIA_URL }}cat.jpg"/>
 {% endblock %}
 

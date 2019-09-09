@@ -40,7 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rango',
+    'django_crontab',
 ]
+
+CRONJOBS = [
+            ('0   4 * * *', 'django.core.management.call_command', ['clearsessions']),
+        ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -138,3 +143,5 @@ PASSWORD_HASHERS = [
 
 LOGIN_URL = '/rango/login/'
 
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIE_AGE = 1209600
