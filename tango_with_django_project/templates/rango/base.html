@@ -35,6 +35,7 @@
 				{% else %}
 				<li><a href="{% url 'rango:restricted' %}">Restricted Page</a></li>
 				<li><a href="{% url 'auth_logout' %}?next=/rango/">Logout</a></li>
+				<li><a href="{% url 'auth_password_change' %}">Change Password</a></li>
 				<li><a href="{% url 'rango:add_category' %}">Add New Category</a></li>
 				{% endif %}
 			</ul>

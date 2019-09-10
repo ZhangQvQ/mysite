@@ -4434,3 +4434,248 @@ Watching for file changes with StatReloader
 [10/Sep/2019 14:27:43] "GET /account/register/ HTTP/1.1" 200 2255
 [10/Sep/2019 14:27:49] "GET /account/register/ HTTP/1.1" 200 2255
 [10/Sep/2019 14:27:52] "GET /account/login/ HTTP/1.1" 200 1598
+[10/Sep/2019 15:21:43] "GET /account/login/ HTTP/1.1" 200 1598
+[10/Sep/2019 15:21:44] "GET /account/login/ HTTP/1.1" 200 1598
+[10/Sep/2019 15:21:46] "GET /account/login/ HTTP/1.1" 200 1598
+[10/Sep/2019 15:21:50] "GET /account/password/reset/ HTTP/1.1" 200 1272
+[10/Sep/2019 15:21:55] "GET /account/login/ HTTP/1.1" 200 1598
+[10/Sep/2019 15:22:04] "GET /account/register/ HTTP/1.1" 200 2255
+[10/Sep/2019 15:22:21] "GET /admin HTTP/1.1" 301 0
+[10/Sep/2019 15:22:21] "GET /admin/ HTTP/1.1" 302 0
+[10/Sep/2019 15:22:21] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1821
+[10/Sep/2019 15:22:21] "GET /static/admin/css/login.css HTTP/1.1" 200 1233
+[10/Sep/2019 15:22:21] "GET /static/admin/css/base.css HTTP/1.1" 200 16378
+[10/Sep/2019 15:22:21] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17944
+[10/Sep/2019 15:22:21] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[10/Sep/2019 15:22:21] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[10/Sep/2019 15:22:21] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[10/Sep/2019 15:22:23] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[10/Sep/2019 15:22:23] "GET /admin/ HTTP/1.1" 200 7604
+[10/Sep/2019 15:22:23] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[10/Sep/2019 15:22:23] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[10/Sep/2019 15:22:23] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[10/Sep/2019 15:22:23] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[10/Sep/2019 15:22:23] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+Internal Server Error: /admin/registration/registrationprofile/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: registration_registrationprofile
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/options.py", line 606, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/options.py", line 1672, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/options.py", line 744, in get_changelist_instance
+    sortable_by,
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/views/main.py", line 82, in __init__
+    self.get_results(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/views/main.py", line 210, in get_results
+    result_count = paginator.count
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/paginator.py", line 91, in count
+    return c()
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 392, in count
+    return self.query.get_count(using=self.db)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/sql/query.py", line 504, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/sql/query.py", line 489, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: registration_registrationprofile
+[10/Sep/2019 15:22:27] "GET /admin/registration/registrationprofile/ HTTP/1.1" 500 176749
+[10/Sep/2019 15:22:36] "GET /admin/ HTTP/1.1" 200 7604
+Internal Server Error: /admin/registration/registrationprofile/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: registration_registrationprofile
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/options.py", line 606, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/options.py", line 1672, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/options.py", line 744, in get_changelist_instance
+    sortable_by,
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/views/main.py", line 82, in __init__
+    self.get_results(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/views/main.py", line 210, in get_results
+    result_count = paginator.count
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/paginator.py", line 91, in count
+    return c()
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 392, in count
+    return self.query.get_count(using=self.db)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/sql/query.py", line 504, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/sql/query.py", line 489, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: registration_registrationprofile
+[10/Sep/2019 15:22:42] "GET /admin/registration/registrationprofile/ HTTP/1.1" 500 176748
+[10/Sep/2019 15:23:22] "GET /admin/ HTTP/1.1" 200 7604
+[10/Sep/2019 15:23:23] "GET /admin/rango/userprofile/ HTTP/1.1" 200 4392
+[10/Sep/2019 15:23:23] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[10/Sep/2019 15:23:23] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[10/Sep/2019 15:23:23] "GET /admin/jsi18n/ HTTP/1.1" 200 7722
+[10/Sep/2019 15:23:23] "GET /static/admin/js/core.js HTTP/1.1" 200 7099
+[10/Sep/2019 15:23:23] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6918
+[10/Sep/2019 15:23:23] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 271817
+[10/Sep/2019 15:23:23] "GET /static/admin/js/actions.js HTTP/1.1" 200 6766
+[10/Sep/2019 15:23:23] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8941
+[10/Sep/2019 15:23:23] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1530
+[10/Sep/2019 15:23:23] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[10/Sep/2019 15:23:23] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[10/Sep/2019 15:23:32] "POST /admin/rango/userprofile/ HTTP/1.1" 200 3348
+[10/Sep/2019 15:23:32] "GET /static/admin/js/cancel.js HTTP/1.1" 200 409
+[10/Sep/2019 15:23:33] "POST /admin/rango/userprofile/ HTTP/1.1" 302 0
+[10/Sep/2019 15:23:33] "GET /admin/rango/userprofile/ HTTP/1.1" 200 3338
+[10/Sep/2019 15:23:33] "GET /admin/jsi18n/ HTTP/1.1" 200 7722
+[10/Sep/2019 15:23:33] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[10/Sep/2019 15:23:35] "GET /admin/rango/ HTTP/1.1" 200 3313
+[10/Sep/2019 15:23:36] "GET /admin/rango/page/ HTTP/1.1" 200 7102
+[10/Sep/2019 15:23:36] "GET /admin/jsi18n/ HTTP/1.1" 200 7722
+[10/Sep/2019 15:23:38] "GET /admin/rango/ HTTP/1.1" 200 3313
+[10/Sep/2019 15:23:39] "GET /admin/rango/category/ HTTP/1.1" 200 5043
+[10/Sep/2019 15:23:39] "GET /admin/jsi18n/ HTTP/1.1" 200 7722
+[10/Sep/2019 15:23:41] "GET /admin/rango/ HTTP/1.1" 200 3313
+[10/Sep/2019 15:23:42] "GET /admin/ HTTP/1.1" 200 7849
+Internal Server Error: /admin/registration/registrationprofile/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: registration_registrationprofile
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/handlers/base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/options.py", line 606, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/sites.py", line 223, in inner
+    return view(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/options.py", line 1672, in changelist_view
+    cl = self.get_changelist_instance(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/options.py", line 744, in get_changelist_instance
+    sortable_by,
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/views/main.py", line 82, in __init__
+    self.get_results(request)
+  File "/usr/local/lib/python3.6/dist-packages/django/contrib/admin/views/main.py", line 210, in get_results
+    result_count = paginator.count
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/functional.py", line 80, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/paginator.py", line 91, in count
+    return c()
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/query.py", line 392, in count
+    return self.query.get_count(using=self.db)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/sql/query.py", line 504, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/sql/query.py", line 489, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/models/sql/compiler.py", line 1100, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 99, in execute
+    return super().execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 76, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python3.6/dist-packages/django/db/backends/sqlite3/base.py", line 383, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: registration_registrationprofile
+[10/Sep/2019 15:23:53] "GET /admin/registration/registrationprofile/ HTTP/1.1" 500 176749
